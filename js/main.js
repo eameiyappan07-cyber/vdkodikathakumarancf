@@ -51,7 +51,7 @@
       'about-p1': 'வேலூர் மாவட்ட கொடிகாத்த குமரன் தொண்டு மன்றம், சுதந்திர வீரர் திருப்பூர் குமரனின் வீரத்தை போற்றும் வகையில் நிறுவப்பட்ட ஒரு சேவை நிறுவனம். கல்வி, சுகாதாரம், கலை என்ற மூன்று தூண்களில் நின்று சமூகத்திற்கு சேவை புரிகிறோம்.',
       'about-p2': 'முனைவர் வே.வினாயகமூர்த்தி அவர்களின் தலைமையில், இம்மன்றம் ஆண்டுதோறும் பள்ளி மாணவர்களுக்கு விருதுகள், இலவச மருத்துவ முகாம்கள், இரத்தான முகாம்கள் மற்றும் கலை போட்டிகள் நடத்துகிறது.',
       'about-h1-title': 'முனைவர் வே.வினாயகமூர்த்தி',
-      'about-h1-sub': 'பொதுச் செயலாளர்',
+	  'about-h1-sub': 'பொதுச் செயலாளர்',
       'about-h2-title': 'பதிவு பெற்ற அமைப்பு',
       'about-h2-sub': 'குடியேற்றம், வேலூர் மாவட்டம்',
       'about-h3-title': 'தொடர்ச்சியான சேவை',
@@ -131,7 +131,7 @@
     en: {
       'topbar-phone':   '📞 +91 94886 36096',
       'topbar-email':   '✉ vinayagam.stc@gmail.com',
-      'topbar-address': '📍 Kudiyeattram, Vellore',
+      'topbar-address': '📍 Gudiyattam, Vellore',
 
       'nav-about':    'About Us',
       'nav-services': 'Services',
@@ -141,7 +141,7 @@
       'nav-donate':   '❤ Donate',
 
       'hero-tag':      'Vellore District • Registered Organisation',
-      'hero-title-1':  'Kodikatha Kumaran',
+      'hero-title-1':  'Vellore District Kodikatha Kumaran',
       'hero-title-2':  'Charitable Forum',
       'hero-title-en': 'Vellore District Charitable Forum',
       'hero-subtitle': 'Be firm in principles — Be compassionate in service',
@@ -159,18 +159,18 @@
       'stat-4-label': 'Volunteers',
 
       'about-label': 'About Us',
-      'about-title': 'Serving the community of <span>Kudiyeattram</span>',
-      'about-desc': 'A registered charitable organisation in Kudiyeattram, Vellore District, dedicated to social welfare.',
+      'about-title': 'Serving the community of <span>Gudiyattam</span>',
+      'about-desc': 'A registered charitable organisation in Gudiyattam, Vellore District, dedicated to social welfare.',
       'about-p1': 'Vellore District Kodikatha Kumaran Charitable Forum was established to honour the bravery of freedom fighter Tirupur Kumaran. We serve society through three pillars: education, healthcare, and arts.',
       'about-p2': 'Under the leadership of Dr. V. Vinayagamurthi, the forum annually conducts awards for school students, free medical camps, blood donation drives, and cultural competitions.',
       'about-h1-title': 'Dr. V. Vinayagamurthi',
       'about-h1-sub': 'General Secretary',
       'about-h2-title': 'Registered Organisation',
-      'about-h2-sub': 'Kudiyeattram, Vellore District',
+      'about-h2-sub': 'Gudiyattam, Vellore District',
       'about-h3-title': 'Continuous Service',
       'about-h3-sub': 'Education, Health, Arts',
       'about-address-label': 'Registered Office Address',
-      'about-address-val': 'No. 83/36, Congress House Road,\nPudupettai, Kudiyeattram, Vellore District.',
+      'about-address-val': 'No. 83/36, Congress House Road,\nPudupettai, Gudiyattam, Vellore District.',
       'about-badge-text': 'Years of Service',
 
       'svc-label': 'Our Services',
@@ -221,13 +221,13 @@
       'contact-phone-label': 'Phone',
       'contact-email-label': 'Email',
       'contact-addr-label': 'Address',
-      'contact-addr-val': 'No. 83/36, Congress House Road, Pudupettai, Kudiyeattram.',
+      'contact-addr-val': 'No. 83/36, Congress House Road, Pudupettai, Gudiyattam.',
       'contact-wa-label': 'WhatsApp',
       'enquiry-title': '💬 Quick Enquiry',
       'enquiry-body': 'For any questions about the forum\'s activities, donations, or events, reach us instantly via WhatsApp.',
       'enquiry-btn': '💬 WhatsApp Enquiry',
 
-      'footer-desc': 'Vellore District Kodikatha Kumaran Charitable Forum — serving the community of Kudiyeattram through education, healthcare, and arts since its founding.',
+      'footer-desc': 'Vellore District Kodikatha Kumaran Charitable Forum — serving the community of Gudiyattam through education, healthcare, and arts since its founding.',
       'footer-links-title': 'Quick Links',
       'footer-contact-title': 'Contact',
       'footer-copy': '© 2025 Vellore District Kodikatha Kumaran Charitable Forum. All Rights Reserved.',
@@ -476,3 +476,21 @@
   });
 
 })();
+
+
+
+ /* ============================================================
+     Gallery_slid_show
+     ============================================================ */
+const sliders = document.querySelectorAll('.slider');
+
+sliders.forEach(slider => {
+  let slides = slider.querySelectorAll('.slide');
+  let index = 0;
+
+  setInterval(() => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+  }, 2500); // 2.5 sec
+});
